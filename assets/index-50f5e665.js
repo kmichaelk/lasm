@@ -108,7 +108,7 @@ ld [1008], R5 ; res
 
 and R4, R1, R6 ; n & 1
 cmp R6, R1
-jne [ +12 ]
+jne [ +4 ]
 mul R5, R3, R5 ; res *= a
 mul R3, R3, R3 ; a *= a
 shr R4, R1, R4 ; n >>= 1
@@ -145,7 +145,7 @@ add R1, R3, R1
 
 ld [R1], R6 ; R6 - *p
 cmp R6, R4
-jle [+12]
+jle [+4]
 mov R6, R4
 add R1, R3, R1
 cmp R1, R5
